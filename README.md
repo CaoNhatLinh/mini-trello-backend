@@ -4,27 +4,27 @@ Backend API server cho ứng dụng Mini Trello được xây dựng với Node.
 
 ## Features
 
-### 🔐 Authentication
+### Authentication
 - **Email-based authentication** (no passwords required)
 - **Verification code system** sent via email
 - **GitHub OAuth integration** for seamless sign-in
 - **JWT token management** with refresh capabilities
 - **Firebase Authentication** support
 
-### 📋 Board Management
+### Board Management
 - Create, read, update, delete boards
 - Board member management and invitations
 - Role-based access control (owner/member)
 - Email invitation system
 
-### 🎯 Card Management
+### Card Management
 - Create cards within boards
 - Card positioning and drag-drop support
 - Member assignment to cards
 - Comments and attachments system
 - Rich text descriptions
 
-### ✅ Task Management
+### Task Management
 - Create tasks within cards
 - Task completion tracking
 - Due date management
@@ -32,7 +32,7 @@ Backend API server cho ứng dụng Mini Trello được xây dựng với Node.
 - Labels and categorization
 - Member assignment
 
-### 🐙 GitHub Integration
+### GitHub Integration
 - OAuth authentication with GitHub
 - Repository browsing and management
 - Issue and Pull Request integration
@@ -40,7 +40,7 @@ Backend API server cho ứng dụng Mini Trello được xây dựng với Node.
 - Branch information
 - Search repositories
 
-### 📧 Email Services
+### Email Services
 - Verification code delivery
 - Board invitation emails
 - Notification system
@@ -82,7 +82,7 @@ Create a `.env` file in the root directory:
 # Server Configuration
 PORT=5000
 NODE_ENV=development
-FRONTEND_URL=http://localhost:3000
+FRONTEND_URL=http://localhost:5173
 
 # Firebase Configuration
 FIREBASE_PROJECT_ID=your-firebase-project-id
@@ -150,11 +150,6 @@ npm run dev
 npm start
 ```
 
-### Using PM2 (Production)
-```bash
-npm install -g pm2
-pm2 start ecosystem.config.js
-```
 
 ## API Documentation
 
@@ -253,17 +248,6 @@ GET    /api/github/repositories/:owner/:repo/pulls/paginated   # Get paginated p
 - **JWT token** authentication
 - **Firebase security rules**
 - **Environment variable** protection
-
-
-### Available Scripts
-```bash
-npm run dev        # Start development server with nodemon
-```
-or
-```bash
-node src/app.js        # Start development server with nodemon
-
-```
 
 
 ## Contributing
