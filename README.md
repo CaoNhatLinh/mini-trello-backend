@@ -10,7 +10,7 @@ A Trello-like project management application built with Node.js, Express, React,
 - **GitHub OAuth integration** for seamless sign-in
 - **JWT token management** with refresh capabilities
 - **Firebase Authentication** support
-- **Rate Limiting: API protection against spam and DDoS attacks
+- **Rate Limiting** API protection against spam and DDoS attacks
 
 ### Board Management
 - Create, read, update, delete boards
