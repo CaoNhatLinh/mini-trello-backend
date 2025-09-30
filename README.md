@@ -1,6 +1,6 @@
 # Mini Trello Backend API
 
-Backend API server cho ứng dụng Mini Trello được xây dựng với Node.js, Express và Firebase.
+A Trello-like project management application built with Node.js, Express, React, and Firebase. The application supports email authentication, GitHub integration, and real-time collaboration.
 
 ## Features
 
@@ -245,7 +245,8 @@ GET    /api/github/repositories/:owner/:repo/pulls/paginated   # Get paginated p
 - **JWT token** authentication
 - **Firebase security rules**
 - **Environment variable** protection
-
+### Frontend
+[mini-trello-frontend](https://github.com/CaoNhatLinh/mini-trello-frontend)
 
 ## Contributing
 
