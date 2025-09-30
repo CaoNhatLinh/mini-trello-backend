@@ -1,15 +1,16 @@
-# 🔌 Mini Trello Backend API
+# Mini Trello Backend API
 
 Backend API server cho ứng dụng Mini Trello được xây dựng với Node.js, Express và Firebase.
 
 ## Features
 
-### Authentication
+### Authentication & Security
 - **Email-based authentication** (no passwords required)
 - **Verification code system** sent via email
 - **GitHub OAuth integration** for seamless sign-in
 - **JWT token management** with refresh capabilities
 - **Firebase Authentication** support
+- **Rate Limiting: API protection against spam and DDoS attacks
 
 ### Board Management
 - Create, read, update, delete boards
@@ -17,34 +18,30 @@ Backend API server cho ứng dụng Mini Trello được xây dựng với Node.
 - Role-based access control (owner/member)
 - Email invitation system
 
-### Card Management
-- Create cards within boards
-- Card positioning and drag-drop support
-- Member assignment to cards
-- Comments and attachments system
-- Rich text descriptions
+### Real-time Notifications
+- Socket.IO: Real-time updates for all team members
+- Notification System: In-app notification system
+- Email Notifications: Email alerts for important events
 
-### Task Management
-- Create tasks within cards
-- Task completion tracking
-- Due date management
-- Priority levels (low, medium, high, urgent)
-- Labels and categorization
+
+### Task & Card Management
+- Member assignment to cards
+- Card positioning and drag-drop support
+- Create cards/ tasks within cards
+- Due date & Priority levels (low, medium, high, urgent)
 - Member assignment
 
 ### GitHub Integration
 - OAuth authentication with GitHub
-- Repository browsing and management
-- Issue and Pull Request integration
-- Commit tracking and linking
-- Branch information
-- Search repositories
+- Repository Access: View user's GitHub repositories
+- Issues & Pull Requests: Access and link GitHub issues/PRs
+- Commits: Track commits and code changes
+- Attachment System: Attach GitHub items to tasks
 
-### Email Services
+### Email Services 
 - Verification code delivery
 - Board invitation emails
-- Notification system
-- HTML email templates
+
 
 ## Tech Stack
 
@@ -264,7 +261,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Support
 
-For support, email support@minitrello.com or create an issue in the repository.
+For support, email caonhatlinh1312@gmail.com or create an issue in the repository.
 
 
 
