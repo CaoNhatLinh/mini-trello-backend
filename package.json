@@ -1,0 +1,44 @@
+{
+  "name": "mini-trello-backend",
+  "version": "1.0.0",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "keywords": [
+    "trello",
+    "api",
+    "firebase",
+    "github",
+    "authentication"
+  ],
+  "author": "Your Name",
+  "license": "ISC",
+  "description": "Mini Trello Backend API with Firebase, GitHub Integration and Email Authentication",
+  "dependencies": {
+    "axios": "^1.5.1",
+    "bcryptjs": "^2.4.3",
+    "compression": "^1.8.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-rate-limit": "^7.5.1",
+    "express-validator": "^7.0.1",
+    "firebase-admin": "^11.11.0",
+    "helmet": "^7.2.0",
+    "jsonwebtoken": "^9.0.2",
+    "moment": "^2.29.4",
+    "morgan": "^1.10.1",
+    "nodemailer": "^6.9.7",
+    "socket.io": "^4.8.1",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "nodemon": "^3.0.1",
+    "supertest": "^6.3.3"
+  }
+}
