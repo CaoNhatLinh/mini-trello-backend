@@ -44,7 +44,6 @@ A Trello-like project management application built with Node.js, Express, React,
 
 
 ## Tech Stack
-
 - **Runtime**: Node.js
 - **Framework**: Express.js
 - **Database**: Firebase Firestore
@@ -56,7 +55,6 @@ A Trello-like project management application built with Node.js, Express, React,
 - **Documentation**: Built-in API docs
 
 ## Installation
-
 ### Prerequisites
 - Node.js (v14 or higher)
 - npm or yarn
@@ -65,7 +63,6 @@ A Trello-like project management application built with Node.js, Express, React,
 - Email service (Gmail/SMTP)
 
 ### Setup Steps
-
 1. **Clone and install dependencies:**
 ```bash
 git clone <repository-url>
@@ -146,16 +143,13 @@ npm run dev
 ```bash
 npm start
 ```
-
-
-## API Documentation
+### API Documentation
 
 Once the server is running, visit:
 - **API Documentation**: http://localhost:5000/api/docs
 - **Health Check**: http://localhost:5000/health
 
 ## API Endpoints
-
 ### Authentication
 ```
 POST   /api/auth/send-verification-code    # Send verification code
@@ -203,14 +197,14 @@ PUT    /api/boards/:boardId/cards/:cardId/tasks/:taskId            # Update task
 DELETE /api/boards/:boardId/cards/:cardId/tasks/:taskId            # Delete task
 ```
 
-# Task Member Management
+#### Task Member Management
 ```
 GET    /api/boards/:boardId/cards/:cardId/tasks/:taskId/members                  # Get task members
 POST   /api/boards/:boardId/cards/:cardId/tasks/:taskId/assign-member            # Assign member to task
 DELETE /api/boards/:boardId/cards/:cardId/tasks/:taskId/members/:memberId        # Remove member from task
 ```
 
-# GitHub Attachments for Tasks
+### GitHub Attachments for Tasks
 ```
 GET    /api/boards/:boardId/cards/:cardId/tasks/:taskId/github-attachments                  # Get GitHub attachments
 POST   /api/boards/:boardId/cards/:cardId/tasks/:taskId/github-attachments                  # Attach GitHub item to task
