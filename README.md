@@ -1,53 +1,49 @@
-# 🔌 Mini Trello Backend API
+# Mini Trello Backend API
 
-Backend API server cho ứng dụng Mini Trello được xây dựng với Node.js, Express và Firebase.
+A Trello-like project management application built with Node.js, Express, React, and Firebase. The application supports email authentication, GitHub integration, and real-time collaboration.
 
 ## Features
 
-### 🔐 Authentication
+### Authentication & Security
 - **Email-based authentication** (no passwords required)
 - **Verification code system** sent via email
 - **GitHub OAuth integration** for seamless sign-in
 - **JWT token management** with refresh capabilities
 - **Firebase Authentication** support
+- **Rate Limiting** API protection against spam and DDoS attacks
 
-### 📋 Board Management
+### Board Management
 - Create, read, update, delete boards
 - Board member management and invitations
 - Role-based access control (owner/member)
 - Email invitation system
 
-### 🎯 Card Management
-- Create cards within boards
-- Card positioning and drag-drop support
-- Member assignment to cards
-- Comments and attachments system
-- Rich text descriptions
+### Real-time Notifications
+- Socket.IO: Real-time updates for all team members
+- Notification System: In-app notification system
+- Email Notifications: Email alerts for important events
 
-### ✅ Task Management
-- Create tasks within cards
-- Task completion tracking
-- Due date management
-- Priority levels (low, medium, high, urgent)
-- Labels and categorization
+
+### Task & Card Management
+- Member assignment to cards
+- Card positioning and drag-drop support
+- Create cards/ tasks within cards
+- Due date & Priority levels (low, medium, high, urgent)
 - Member assignment
 
-### 🐙 GitHub Integration
+### GitHub Integration
 - OAuth authentication with GitHub
-- Repository browsing and management
-- Issue and Pull Request integration
-- Commit tracking and linking
-- Branch information
-- Search repositories
+- Repository Access: View user's GitHub repositories
+- Issues & Pull Requests: Access and link GitHub issues/PRs
+- Commits: Track commits and code changes
+- Attachment System: Attach GitHub items to tasks
 
-### 📧 Email Services
+### Email Services 
 - Verification code delivery
 - Board invitation emails
-- Notification system
-- HTML email templates
+
 
 ## Tech Stack
-
 - **Runtime**: Node.js
 - **Framework**: Express.js
 - **Database**: Firebase Firestore
@@ -59,7 +55,6 @@ Backend API server cho ứng dụng Mini Trello được xây dựng với Node.
 - **Documentation**: Built-in API docs
 
 ## Installation
-
 ### Prerequisites
 - Node.js (v14 or higher)
 - npm or yarn
@@ -68,7 +63,6 @@ Backend API server cho ứng dụng Mini Trello được xây dựng với Node.
 - Email service (Gmail/SMTP)
 
 ### Setup Steps
-
 1. **Clone and install dependencies:**
 ```bash
 git clone <repository-url>
@@ -82,7 +76,7 @@ Create a `.env` file in the root directory:
 # Server Configuration
 PORT=5000
 NODE_ENV=development
-FRONTEND_URL=http://localhost:3000
+FRONTEND_URL=http://localhost:5173
 
 # Firebase Configuration
 FIREBASE_PROJECT_ID=your-firebase-project-id
@@ -161,6 +155,7 @@ npm start
 # Hoặc explicit
 npm run start:prod
 ```
+<<<<<<< HEAD
 Server sẽ bind vào `0.0.0.0:5000` (cho Render.com, VPS, v.v.)
 
 ### Using PM2 (Production)
@@ -187,13 +182,15 @@ Chi tiết đầy đủ về deployment lên Render.com, xem file [DEPLOY_GUIDE.
 **Lưu ý:** Server sẽ tự động bind vào `0.0.0.0` khi `NODE_ENV=production`
 
 ## API Documentation
+=======
+### API Documentation
+>>>>>>> befc91aa2bb421d85a3612ce9287b737330d4c40
 
 Once the server is running, visit:
 - **API Documentation**: http://localhost:5000/api/docs
 - **Health Check**: http://localhost:5000/health
 
 ## API Endpoints
-
 ### Authentication
 ```
 POST   /api/auth/send-verification-code    # Send verification code
@@ -241,14 +238,14 @@ PUT    /api/boards/:boardId/cards/:cardId/tasks/:taskId            # Update task
 DELETE /api/boards/:boardId/cards/:cardId/tasks/:taskId            # Delete task
 ```
 
-# Task Member Management
+#### Task Member Management
 ```
 GET    /api/boards/:boardId/cards/:cardId/tasks/:taskId/members                  # Get task members
 POST   /api/boards/:boardId/cards/:cardId/tasks/:taskId/assign-member            # Assign member to task
 DELETE /api/boards/:boardId/cards/:cardId/tasks/:taskId/members/:memberId        # Remove member from task
 ```
 
-# GitHub Attachments for Tasks
+### GitHub Attachments for Tasks
 ```
 GET    /api/boards/:boardId/cards/:cardId/tasks/:taskId/github-attachments                  # Get GitHub attachments
 POST   /api/boards/:boardId/cards/:cardId/tasks/:taskId/github-attachments                  # Attach GitHub item to task
@@ -283,18 +280,8 @@ GET    /api/github/repositories/:owner/:repo/pulls/paginated   # Get paginated p
 - **JWT token** authentication
 - **Firebase security rules**
 - **Environment variable** protection
-
-
-### Available Scripts
-```bash
-npm run dev        # Start development server with nodemon
-```
-or
-```bash
-node src/app.js        # Start development server with nodemon
-
-```
-
+### Frontend
+[mini-trello-frontend](https://github.com/CaoNhatLinh/mini-trello-frontend)
 
 ## Contributing
 
@@ -310,7 +297,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Support
 
-For support, email support@minitrello.com or create an issue in the repository.
+For support, email caonhatlinh1312@gmail.com or create an issue in the repository.
 
 
 
