@@ -27,7 +27,7 @@ app.use(helmet({
 
 // CORS configuration
 app.use(cors({
-  origin: process.env.FRONTEND_URL || 'http://localhost:3000',
+  origin: process.env.FRONTEND_URL ,
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With']
@@ -295,8 +295,9 @@ process.on('SIGINT', () => {
 
 // Start server only if this file is run directly
 if (require.main === module) {
-  const PORT = process.env.PORT || 5001;
-  const HOST = process.env.HOST || 'localhost';
+  const PORT = process.env.PORT || 5000;
+  // Use 0.0.0.0 for production (Render.com), localhost for development
+  const HOST = process.env.NODE_ENV === 'production' ? '0.0.0.0' : (process.env.HOST || 'localhost');
   
   const { createServer } = require('http');
   const { initSocket } = require('./socket/socketServer');
@@ -311,8 +312,6 @@ if (require.main === module) {
     console.log(`📖 API Docs: http://${HOST}:${PORT}/api/docs`);
     console.log(`❤️  Health Check: http://${HOST}:${PORT}/health`);
     console.log(`🌍 Environment: ${process.env.NODE_ENV || 'development'}`);
-    console.log(`🔗 Frontend URL: ${process.env.FRONTEND_URL}`);
-    console.log(`🔌 Socket.IO Server initialized`);
     console.log('='.repeat(60));
   });
 }
