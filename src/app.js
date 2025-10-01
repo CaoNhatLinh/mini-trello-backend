@@ -47,22 +47,6 @@ if (process.env.NODE_ENV === 'development') {
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 
-// Import enhanced cache middleware
-const { cacheManager } = require('./middleware/cache');
-
-// Apply cache to specific routes that are frequently accessed
-app.use('/api/boards/:id/members', cacheManager.middleware());
-app.use('/api/boards/:boardId/cards', cacheManager.middleware());
-
-// Add cache status endpoint for debugging
-app.get('/api/cache/stats', (req, res) => {
-  res.json({
-    status: 'Cache statistics',
-    ...cacheManager.getStats(),
-    timestamp: new Date().toISOString()
-  });
-});
-
 // Rate limiting
 const limiter = rateLimit({
   windowMs: parseInt(process.env.RATE_LIMIT_WINDOW_MS) || 15 * 60 * 1000, // 15 minutes
