@@ -133,10 +133,6 @@ RATE_LIMIT_MAX_REQUESTS=100
 - Use the App Password in the `EMAIL_PASS` field
 
 ## Running the Application
-
-
-## Running the Application
-
 ### Development Mode (Local)
 ```bash
 # Development với auto-reload (nodemon)
@@ -151,41 +147,13 @@ Server sẽ chạy tại `http://localhost:5000`
 ```bash
 # Production mode
 npm start
-
-# Hoặc explicit
-npm run start:prod
 ```
 <<<<<<< HEAD
 Server sẽ bind vào `0.0.0.0:5000` (cho Render.com, VPS, v.v.)
 
-### Using PM2 (Production)
-```bash
-npm install -g pm2
-pm2 start src/app.js --name mini-trello-backend -i max
-pm2 save
-pm2 startup
-```
-
-## 🚀 Deployment
-
-### Deploy to Render.com
-Chi tiết đầy đủ về deployment lên Render.com, xem file [DEPLOY_GUIDE.md](./DEPLOY_GUIDE.md)
-
-**Tóm tắt nhanh:**
-1. Push code lên GitHub
-2. Tạo Web Service trên Render.com
-3. Set Build Command: `npm install`
-4. Set Start Command: `npm start`
-5. Thêm Environment Variables (đặc biệt `NODE_ENV=production`)
-6. Deploy!
-
-**Lưu ý:** Server sẽ tự động bind vào `0.0.0.0` khi `NODE_ENV=production`
 
 ## API Documentation
 =======
-### API Documentation
->>>>>>> befc91aa2bb421d85a3612ce9287b737330d4c40
-
 Once the server is running, visit:
 - **API Documentation**: http://localhost:5000/api/docs
 - **Health Check**: http://localhost:5000/health
